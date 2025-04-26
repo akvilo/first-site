@@ -2,20 +2,16 @@ const productsBlock = document.querySelector('.products_blocks')
 const cardShop = document.querySelector('.product_block')
 const pickFavorite = document.getElementById('button_to_cart')
 const listUserFavorite = document.getElementById('favorite-user-cards')
+const listCards = document.getElementById('products_blocks')
 
-function loadCards() {
-    for (let cards = 1; cards < 5; cards++) {
-        let clone = cardShop.cloneNode(true);
-        productsBlock.appendChild(clone);
-        console.log(`Карточка ${cards} загружена`)
+const cards = [1, 2, 3, 4]
+
+function renderCards() {
+    for (let i = 0; i < cards.length; i++) {
+        console.log(`Карточка ${i} загружена`)
+        listCards.insertAdjacentHTML('beforeend', getCard(i))
     };
 }
-
-const cards = [{
-    price: document.querySelector('.block_buy_cost').textContent,
-    guarantee: checkGuarantee()
-    
-}]
 
 function checkGuarantee() {
     if (document.getElementById('product_guarantee').textContent === 'Есть') {
@@ -26,12 +22,82 @@ function checkGuarantee() {
     }
 }
 
-loadCards()
+renderCards()
+
+function getCard(cardIndex) {
+    return`
+            <div class="product_block">
+            <div class="product_block_1">
+                <div class="product_block_city_year">
+                    <span class = "product_block_text_3">
+                        <img src="images/card/city.svg" alt="City">
+                        Киев
+                    </span>
+                    <span class = "product_year_text">Год:</span>
+                    <span class = "product_block_text_3">2025</span>
+                </div>
+                <div class="product_block_country">
+                    <a href="supplier.html" class = "product_block_photo_company" >
+                        <img src="images/card/company_shipshina.svg" alt="company ship shina">
+                    </a>
+                    <span class = "product_block_country_text">Страна:</span>
+                    <img class = "product_block_flag_country" src="images/card/flag_ua.svg" alt="Flag Ukraine">
+                </div>
+                <div class="product_block_guarantee">
+                    <span class = "product_block_text_3">Показать телефон</span>
+                    <span class = "product_block_text_3">Гарантия</span>
+                    <span class = "product_block_text_3" id = "product_guarantee">Есть</span>
+                </div>
+            </div>
+            <div class="product_block_2">
+                <div class="product_block_overlay">
+                    <span class = "product_block_text_2">Наложка</span>
+                    <span class = "product_block_text_2">Нет</span>
+                </div>
+                <div class="product_block_installment">
+                    <span class = "product_block_text_2">Расрочка</span>
+                    <span class = "product_block_text_2">Да</span>
+                </div>
+                <div class="product_block_VAT">
+                    <span class = "product_block_text_2">НДС:</span>
+                    <span class = "product_block_text_2">Есть</span>
+                </div>
+            </div>
+            <div class="product_block_3">
+                <div class="product_block_delivery">
+                    <span class = "product_block_text_2">Доставка:</span>
+                    <span class = "product_block_text_2">Есть</span>
+                </div>
+                <div class="product_block_return">
+                    <span class = "product_block_text_2">Возврат:</span>
+                    <span class = "product_block_text_2">14 дней</span>
+                </div>
+                <div class="product_block_tire_service">
+                    <span class = "product_block_text_2">Шиномонтаж:</span>
+                    <span class = "product_block_text_2">Есть</span>
+                </div>
+            </div>
+            <div class="product_block_buy">
+                <div class = "product_block_buy_left_side">
+                    <span class = "block_buy_cost">1 800грн.</span>
+                    <span class = "block_buy_in_stock">Доступно 8шт</span>
+                    <div class = "block_buy_cost_delivery">
+                        <span>Цена с доставкой</span>
+                    </div>
+                </div>
+                <div class = "product_block_buy_right_side">
+                    <div class = "button_in_shop">В магазин</div>
+                    <div class = "button_fast_buy"">Быстрый заказ</div>
+                    <div id = "button_to_cart" data-index = "${cardIndex}" onclick = 'cardToFavorite()'>В корзину</div>
+                </div>
+            </div>
+        </div>`
+}
 
 const favorites = []
 let index = favorites.length;
 
-pickFavorite.onclick = function() {
+cardToFavorite = function() {
     listUserFavorite.insertAdjacentHTML('beforeend', getFavoriteUser())
     favorites.push(index);
     // favorites.unshift - поместить иднекс в самое начало массива
