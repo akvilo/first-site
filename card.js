@@ -225,7 +225,7 @@ productSelector.forEach(btn => {
             btn.style.setProperty('--after-display', 'block')
         }
 
-        const productBlock = document.querySelector('.products_blocks')
+        const productBlock = document.getElementById('products_blocks')
         const sortingBlock = document.querySelector('.sorting_block')
         const informationBlock = document.getElementById('information-block')
         const reviewBlock = document.getElementById('review-block')
