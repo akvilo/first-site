@@ -1,0 +1,377 @@
+@import 'variables','fonts';
+
+html {
+    height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Montserrat";
+  
+}
+
+
+header {
+    height: 145px;
+    width: 100vw;
+}
+// вверх шапки
+.header_up {
+    display: flex;
+    justify-content: center;
+    height: 38px;
+    background: $color-white;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.header_middle { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background: $color-blue;
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+
+.header_down {
+    display: flex;
+    height: 47px;
+    border-bottom: 1px solid $color-gray-3;
+}
+
+.language {
+    display: flex;
+    width: 50px;
+    align-items: center;
+    margin-left: 10%;
+    gap: 15px;
+}
+.UA {
+    color: $color-blue;
+    cursor: pointer;
+    
+}
+
+.slash {
+    color: $color-blue;
+}
+.RU {
+    color: $color-yellow;
+    cursor: pointer;
+}
+
+.exchange {
+    display: flex;
+    width: 300px;
+    gap: 30px;
+    margin-left: 20%;
+}
+
+.account {
+    display: flex;
+    margin-left: 5%;
+    width: 500px;
+    gap: 40px;
+    color: $color-blue;
+}
+
+.login {
+    cursor: pointer;
+}
+
+.registration {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+// середина шапки
+.header_middle {
+    align-items: center;
+}
+
+
+.company_name {
+    display: flex;
+    width: 220px;
+    color: $color-white;
+    flex-direction: column;
+}
+
+.tyreclub { 
+    margin-left: 40px;
+    font-size: 1.625rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.tyreclub_undertext {
+    margin-left: 40px;
+    font-size: 0.4375rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+.header_logo {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+}
+
+.header_search {
+    display: flex;
+    width: 591px;
+    height: 40px;
+    background: $color-white;
+    margin-left: 2%;
+    align-items: center;
+    clip-path: polygon(0.5% 0, 100% 0, 99.5% 100%, 0 100%);
+    box-sizing: border-box;
+    padding-right: 0.5%;
+}
+
+.search_find_button {
+    display: flex;
+    width: 80px;
+    height: 28px;
+    background: $color-yellow;
+    clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+    border-radius: 3px;
+    margin-left: auto;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+        background: $color-light-grey;
+    }
+
+    span {
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin-left: 2%;
+    }
+
+}
+
+.header_location {
+    display: flex;
+    width: 116px;
+    height: 40px;
+    background: $color_white;
+    clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    gap: 10px;
+    
+    img {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.4vw;
+    }
+
+    span {
+        text-decoration: underline;
+        margin-right: 0.5vw;
+    }
+}
+
+.header_buttons {
+    display: flex;
+    margin-left: 1.5%;
+    width: 150px;
+    gap: 25px;
+    
+    img {
+        cursor: pointer;
+    }
+}
+
+.catalog {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 2.2vw;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+
+    span {
+        font-weight: 500;
+        font-size: 0.875rem;
+        cursor: pointer;
+    }
+}
+
+.catalog_select {
+    background: $color-light-grey;
+    display: flex;
+    width: 112px;
+    height: 42px;
+    overflow-y: hidden;
+    clip-path: polygon(10% 0, 100% 0,90% 100%, 0 100%);
+    border-bottom: 5px solid $color-blue;
+    justify-content: center;
+    align-items: center;
+    margin-right: -2vw;
+}
+
+.catalog_1 {
+    color: $color-blue;
+    margin-top: 5px;
+  }
+
+.previous_pages {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20%;
+    span {
+        font-size: 0.6785rem;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+}
+
+.previous_page {
+    color: $color-gray-card-text;
+}
+
+.current_page {
+    color: $color-blue;
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-grey;
+    width: 100%;
+    height: 124px;
+    margin-top: auto;
+    gap: 7.5%;
+
+
+.footer_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 210px;
+    gap: 20px;
+
+    img {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+    }
+
+    span {
+        color: $color-white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-left: 40px;
+    }
+
+    .copyright {
+        color: $color-second-white;
+        font-weight: 400;
+        font-size: 0.875rem;
+        margin-left: 0px;
+    }
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span {
+        color: $color-white;
+        font-size: 0.875rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    li {
+        list-style: none;
+        font-size: 0.875rem;
+        color: $color-second-white;
+    }
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+
+    span {
+        font-size: 0.875rem;
+        color: $color-second-white;
+        font-weight: 400;
+        letter-spacing: normal;
+    }
+}
+
+.faq {
+    display: flex;
+    font-size: 0.875rem;
+    color: $color-second-white;
+    text-decoration: underline;
+}
+}
+
+// adaptive 
+
+@media (max-width: 1300px) {
+
+    .exchange {
+        font-size: 0.75rem;
+    }
+    .tyreclub {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .tyreclub {
+        font-size: 1rem;
+    }
+
+    .catalog {
+        gap: 1.5vw;
+    }
+
+    .catalog_select {
+        margin-right: -1.3vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header_location {
+        font-size: 0.875rem;
+    }
+    .catalog  {
+        
+        span {
+        font-size: 0.75rem;
+        }
+    }
+}

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="styles/card.css">
+    <title>TyreClub
+    </title>
+    <link rel ="icon" href="./images/logo2.svg" type ="image/svg">
+</head>
+<body>
+    <header>
+        <div class="header_up">
+            <div class="language">
+                <span class = "UA">UA</span>
+                <span class = "slash">|</span>
+                <span class = "RU">RU</span>
+            </div>
+            <div class="exchange">
+                <span class = "dollar_to_hrn">
+                    $ = 41.43 грн
+                </span>
+                <span class = "euro_to_hrn">
+                    € = 43.11 грн
+                </span>
+            </div>
+            <div class="account">
+                <span id = "login">
+                    <img src = "images/login.svg">
+                    Войти
+                </span>
+                <span onclick = "openRegWindow()" id = "registration">Зарегистрироваться</span>
+            </div>
+            <form id= "registration_window">
+                <span  class="registration_text">Регистрация</span>
+                <div id = "input_data">
+                    <input id="reg_name" placeholder="Имя">
+                    <input id="reg_surname" placeholder="Фамилия">
+                    <input id="reg_age" placeholder="Возраст">
+                    <input id="reg_mail" placeholder="Почта">
+                </div>
+                <div class = "window_exit" onclick = 'closeWindow()'>
+                    <img src="images/Х.svg" alt="exit">
+                </div>
+                <button onclick = "sendRegData()" id = "registration_accept">Подтвердить</button>
+            </form>
+        </div>
+        <div class="header_middle">
+            <div class = "company_name">
+                <a class="header_logo" href="main.html">
+                    <img
+                    class ="logo_image"
+                    src="images/logo2.svg"
+                    alt="TYRE CLUB Logo"
+                    width="35" height="35" loading="eager">
+                </a>
+                <span class = "tyreclub">
+                    TYRE CLUB
+                </span>
+                <span class = "tyreclub_undertext">Маркетплейс шин и дисков №1</span>
+            </div>
+            <div class = "header_search">
+                <input class = "input_search" placeholder="Я ищу...">
+                <div class="search_find_button">
+                    <img src = "images/found.svg" onselectstart ="return false">
+                    <span onselectstart ="return false">НАЙТИ</span>
+                </div>
+            </div>
+            <div class="header_location">
+                <img src = "images/location.svg">
+                <span>Киев</span>
+            </div>
+            <div class = "header_buttons">
+                <img class = "header_profiles" src = "images/profiles.svg">
+                <img class = "header_favorite" src = "images/heart.svg">
+                <img class = "header_basket" src = "images/shopping-cart.svg">
+            </div>
+        </div>
+        <div class="header_down">
+            <nav class = "catalog">
+                <div class = "catalog_select">
+                    <span class = "catalog_1">Шины</span>
+                </div>
+                <span class = "catalog_2">Диски</span>
+                <span class = "catalog_3">АКБ</span>
+                <span class = "catalog_4">Каталоги</span>
+                <span class = "catalog_5">Подбор по авто</span>
+                <span class = "catalog_6">Шинный калькулятор</span>
+                <span class = "catalog_7">Шиномонтажи</span>
+                <span class = "catalog_8">Новости</span>
+                <span class = "catalog_9">Тесты</span>
+                <span class = "catalog_10">О нас</span>
+                </nav>
+        </div>
+    </header>
+    <div class="previous_pages">
+        <span class = "previous_page">Шины ></span>
+        <span class = "previous_page">Nokian ></span>
+        <span class = "current_page">Летние шины Nokian Rotiiva 18 245 60/H/109 HT XL</span>
+    </div>    
+    <section class="main_card_flex">
+        <div class = "main_card_more_photo">
+            <img src="images/card/Rectangle 2.81.svg" alt="additional photo">
+            <img src="images/card/Rectangle 2.82.svg" alt="additional photo">
+            <img src="images/card/Rectangle 2.81.svg" alt="additional photo">
+            <img src="images/card/Rectangle 2.82.svg" alt="additional photo">
+            <img src="images/card/Rectangle 2.81.svg" alt="additional photo">
+        </div>
+        <div class="main_card_major_photo">
+            <img class = "main_photo2" src="images/card/Rectangle 2.34.svg" alt="main_photo">
+            <div class = "main_card_additional">
+                <div class="main_card_mark_used"><span>Б/У</span></div>
+                <img src = "images/card/sun.svg" alt = "summer">
+                <img src="images/card/snowflake.svg" alt = "winter">
+            </div>
+        </div>
+        <div class="main_card_charasteristic">
+            <span class = "main_charasteristic">Основные Характеристики</span>
+            <div class="charasteristic_wrapper">
+                <div>
+                    <span class = "charasteristic_info">Сезон</span>
+                    <span class = "charasteristic_product">Летняя</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Назначение</span>
+                    <span class = "charasteristic_product">Легковой</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Ширина профиля, мм</span>
+                    <span class = "charasteristic_product">185</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Высота профиля, %</span>
+                    <span class = "charasteristic_product">65</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Диаметр</span>
+                    <span class = "charasteristic_product">15</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Индекс нагрузки</span>
+                    <span class = "charasteristic_product">91 (615кг)</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Индекс скорости</span>
+                    <span class = "charasteristic_product">V (240км/ч)</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Усиление</span>
+                    <span class = "charasteristic_product">C</span>
+                </div>
+                <div>
+                    <span class = "charasteristic_info">Шипы</span>
+                    <span class = "charasteristic_product">нет</span>
+                </div>
+
+                </div>
+                <span class = "more_charasteristic">Больше характеристики</span>
+                <div class="price_block">
+                    <div class="price_and_spec">
+                        <div class ="price_block_dynamic">
+                            <img src="images/development.svg" alt="dynamic">
+                            <span onclick = 'openDynWindow()'>Динамика цен</span>
+                        </div>
+                        <div class ="price_block_spec">
+                            <img src="images/vision.svg" alt="spectator">
+                            <span onclick = 'openSpecWindow()'>Следить за ценой</span>
+                        </div>
+                    </div>
+                    <div id = "opacity_window"></div>
+                    <div id ="spec_window">
+                        <div class = "window_exit">
+                            <img src="images/Х.svg" alt="exit" onclick = 'closeWindow()'>
+                        </div>
+                        <div class = "spec_window_text_flex">
+                            <span>Оставьте ваши данные</span>
+                            <span >и мы оповестим вас о снижении цены</span>
+                        </div>
+                        <div class="spec_window_current_product">
+                            <img src="images/Rectangle 2.51.svg" alt="tire">
+                            <div class="spec_window_current_product_text_flex">
+                                <span>Летние шины Nokian Rotiiva 18 245 60/H/109 HT XL</span>
+                                <span>Nokian</span>
+                                <span>3895 грн</span>
+                            </div>
+                        </div>
+                        <div class="spec_window_current_input">
+                            <input id = "userName" type="Name"  placeholder="Имя">
+                            <input id = "userMail" type="Mail" placeholder="Email">
+                        </div>
+                        <button onclick = "sendData()" class="spec_window_current_notify_button">
+                            <span>Оповестить</span>
+                        </button>
+                    </div>
+                    <div id ="dynamic_window">
+                        <div class = "window_exit" onclick = 'closeWindow()'>
+                            <img src="images/Х.svg" alt="exit">
+                        </div>
+                        <img class = "dynamic_stats" src="images/dynamic.svg" alt="dynamic">
+                    </div>
+                    <div class="price_fromto">
+                        <span class = "price_fromto_text">от <strong>1 310</strong> до <strong>1 456</strong> грн.</span>
+                    </div>
+                </div>
+            </div>
+            <div class = "additional_options">
+                <div class="share_link">
+                    <img src="images/card/link.svg" alt="share link">
+                    <span>Поделиться ссылкой</span>
+                </div>
+                <div class="comprasion">
+                    <img src="images/card/profiles.svg" alt="comprasion">
+                    <span>Сравнить этот товар</span>
+                </div>
+                <div class="add_favorite">
+                    <img src="images/card/heart.svg" alt="favorite">
+                    <span>Добавить в избранные</span>
+                </div>
+            </div>
+            <div class="best_offers">
+                <span class = "best_offer_kyiv">Лучшие предложения в Киеве</span>
+                <div class="offer_1">
+                    <img src="images/card/Rectangle 2.81.svg" alt="photo card">
+                    <div class="offer_text_block">
+                        <span class = "offer_location">ПМСВ Асва, Киев</span>
+                        <span class = "offer_name">Леонтовича 15С</span>
+                        <span class = "offer_price">1124 грн</span>
+                    </div>
+                </div>
+                <div class="offer_2">
+                    <img src="images/card/Rectangle 2.81.svg" alt="photo card">
+                    <div class="offer_text_block">
+                        <span class = "offer_location">ПМСВ Асва, Киев</span>
+                        <span class = "offer_name">Леонтовича 15С</span>
+                        <span class = "offer_price">1124 грн</span>
+                    </div>
+                </div>
+                <div class="offer_3">
+                    <img src="images/card/Rectangle 2.81.svg" alt="photo card">
+                    <div class="offer_text_block">
+                        <span class = "offer_location">ПМСВ Асва, Киев</span>
+                        <span class = "offer_name">Леонтовича 15С</span>
+                        <span class = "offer_price">1124 грн</span>
+                    </div>
+                </div>
+                <div class="offer_4">
+                    <img src="images/card/Rectangle 2.81.svg" alt="photo card">
+                    <div class="offer_text_block">
+                        <span class = "offer_location">ПМСВ Асва, Киев</span>
+                        <span class = "offer_name">Леонтовича 15С</span>
+                        <span class = "offer_price">1124 грн</span>
+                    </div>
+                </div>
+                <div class="check_all_offers">
+                    <span>Посмотреть все</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class = "sections_tires">
+        <span class = "current_section">Nokian Rotiiva 205/60 R16 96V</span>
+        <span class ="slot_section_1">205/60 R16</span>
+        <span class ="slot_section_2">205/60 R16</span>
+        <span class ="slot_section_3">205/60 R16</span>
+        <span class ="slot_section_4">205/60 R16</span>
+    </div>
+    <div class="product_info_selector">
+        <span class = "product_slot_1">
+            <img src="images/card/city.svg" alt="City">
+            Киев
+            <span class = "product_selector_city">Выберите город</span>
+        </span>
+        <span id = "product_slot_2">Магазины (5)</span>
+        <span id = "product_slot_3">Информация производителя</span>
+        <span id = "product_slot_4">Отзывы</span>
+    </div>
+    <div class="sorting_block">
+        <span class = "selector_text">
+            Сортировка:
+            <span class = "sorting_selector">Популярные</span>
+        </span>
+        <li class = "sorting_slot_1">С доставкой из других городов (5)</li>
+        <li>Включить доставку в стоимость</li>
+        <li>С НДС</li>
+    </div>
+    <section class="products_blocks">
+        <div class="product_block">
+            <div class="product_block_1">
+                <div class="product_block_city_year">
+                    <span class = "product_block_text_3">
+                        <img src="images/card/city.svg" alt="City">
+                        Киев
+                    </span>
+                    <span class = "product_year_text">Год:</span>
+                    <span class = "product_block_text_3">2025</span>
+                </div>
+                <div class="product_block_country">
+                    <a href="supplier.html" class = "product_block_photo_company" >
+                        <img src="images/card/company_shipshina.svg" alt="company ship shina">
+                    </a>
+                    <span class = "product_block_country_text">Страна:</span>
+                    <img class = "product_block_flag_country" src="images/card/flag_ua.svg" alt="Flag Ukraine">
+                </div>
+                <div class="product_block_guarantee">
+                    <span class = "product_block_text_3">Показать телефон</span>
+                    <span class = "product_block_text_3">Гарантия</span>
+                    <span class = "product_block_text_3" id = "product_guarantee">Есть</span>
+                </div>
+            </div>
+            <div class="product_block_2">
+                <div class="product_block_overlay">
+                    <span class = "product_block_text_2">Наложка</span>
+                    <span class = "product_block_text_2">Нет</span>
+                </div>
+                <div class="product_block_installment">
+                    <span class = "product_block_text_2">Расрочка</span>
+                    <span class = "product_block_text_2">Да</span>
+                </div>
+                <div class="product_block_VAT">
+                    <span class = "product_block_text_2">НДС:</span>
+                    <span class = "product_block_text_2">Есть</span>
+                </div>
+            </div>
+            <div class="product_block_3">
+                <div class="product_block_delivery">
+                    <span class = "product_block_text_2">Доставка:</span>
+                    <span class = "product_block_text_2">Есть</span>
+                </div>
+                <div class="product_block_return">
+                    <span class = "product_block_text_2">Возврат:</span>
+                    <span class = "product_block_text_2">14 дней</span>
+                </div>
+                <div class="product_block_tire_service">
+                    <span class = "product_block_text_2">Шиномонтаж:</span>
+                    <span class = "product_block_text_2">Есть</span>
+                </div>
+            </div>
+            <div class="product_block_buy">
+                <div class = "product_block_buy_left_side">
+                    <span class = "block_buy_cost">1 800грн.</span>
+                    <span class = "block_buy_in_stock">Доступно 8шт</span>
+                    <div class = "block_buy_cost_delivery">
+                        <span>Цена с доставкой</span>
+                    </div>
+                </div>
+                <div class = "product_block_buy_right_side">
+                    <div class = "button_in_shop">В магазин</div>
+                    <div class = "button_fast_buy"">Быстрый заказ</div>
+                    <div id = "button_to_cart">В корзину</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="favorite-block">
+        <span id="favorite-header-text">Ваша корзина:</span>
+        <div id="favorite-user-cards">
+            <div class="favorite-card">            
+            </div>
+        </div>
+    </section>
+    <section id="information-block">
+        <div class="information-wrapper">
+            <div class="information-left-side">
+                <div class="information-main-charasteristic">
+                    <p>Основные характеристики</p>
+                    <div class="information-charasteristic-wrapper">
+                        <div>
+                            <span class = "information-charasteristic-info">Сезон</span>
+                            <span class = "information-charasteristic-product">Летняя</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Назначение</span>
+                            <span class = "information-charasteristic-product">Легковой</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Ширина профиля мм</span>
+                            <span class = "information-charasteristic-product">185</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Высота профиля %</span>
+                            <span class = "information-charasteristic-product">65</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Диаметр</span>
+                            <span class = "information-charasteristic-product">15</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Индекс нагрузки</span>
+                            <span class = "information-charasteristic-product">91 (615кг)</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Индекс скорости</span>
+                            <span class = "information-charasteristic-product">V (240км/ч)</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Усиление</span>
+                            <span class = "information-charasteristic-product">С</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Шипы</span>
+                            <span class = "information-charasteristic-product">нет</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-additional-charasteristic">
+                    <p>Дополнительные Характеристики</p>
+                    <div class="information-charasteristic-wrapper">
+                        <div>
+                            <span class = "information-charasteristic-info">Серия</span>
+                            <span class = "information-charasteristic-product">Rotiva HT</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Состояние</span>
+                            <span class = "information-charasteristic-product">БУ</span>
+                        </div>
+                        <div>
+                            <span class = "information-charasteristic-info">Шина с повышенной нагрузкой</span>
+                            <span class = "information-charasteristic-product">XL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="information-description">
+                <div class = 'information-description-text'>
+                    <p>Описание</p>
+                    <span>Летняя резина Nokian Rotiiva H/T 245/60 R18 109H XL О компании Nokian:</span>
+                    <span>
+                        Компания Nokian — крупнейшая финская шинопроизводительная компания. 
+                        Разрабатывает и производит шины для всех видов колесной и индустриальной техники. 
+                        Главное направление производства это зимние и летние шины предназначены для стран со сложными климатом.
+                    </span>
+                    <span>
+                        Одним из приоритетных направлений развития компании Nokian является производство шин позволяющих повысить безопасность вождения.
+                        Из-за своих ходовых качеств, резина Нокиан пользуется большим спросом на территории Украины. 
+                    </span>
+                    <span>
+                        Преимущества Nokian:
+                        <br>1. Широкий выбор моделей и размеров шин
+                        <br>2. Долговечность
+                        <br>3. Отсутствие эффекта аквапланирования
+                        <br>4. Низкий уровень шума
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="review-block">
+        <div id="review-block-wrapper">
+            <p class = "review-block-header-text">Все отзывы</p>
+                <!-- <div id="user-review">
+                    <div class="user-review-header">
+                        <p id = "user-review-name">Сергей
+                            <time datetime="2025-04-23">23 апреля 2025</time>
+                        </p>
+                    </div>
+                    <span>Одним из приоритетных направлений развития компании Nokian является производство шин позволяющих повысить безопасность вождения. 
+                        Из-за своих ходовых качеств, резина Нокиан пользуется большим спросом на территории Украины. 
+                        Плюсы:
+                        Широкий выбор моделей и размеров шин
+                        Долговечность
+                        Отсутствие эффекта аквапланирования
+                        Низкий уровень шума
+                        
+                        Минусы:
+                        нету
+                    </span> -->
+                </div>
+                <div class="send-feedback-block">
+                    <button id = "send-feedback">Оставить отзыв</button>
+                    <textarea
+                    id = "user-feedback-input"
+                    placeholder="Введите отзыв."
+                    rows="10"
+                    spellcheck="true"
+                    ></textarea>   
+                </div>
+        </div>   
+    </section>
+    <div class="footer_wrapper"></div>
+    <footer>
+        <div class = "footer_logo">
+            <img src ="images/logo2.svg">
+            <span>TYRE CLUB</span>
+            <span class = "copyright">TyreClub 2017-2025</span>
+        </div>
+        <div class="numbers">
+            <span>Телефоны</span>
+            <li>098 883-98-98 </li>
+            <li>050 050-43-00</li>
+        </div>
+        <div class="mail">Почта
+            <span><br>support@tyreclub.com.ua</span>
+        </div>
+        <div class="faq">
+            <span>
+            Политика конфиденциальности
+            <br>Информация о компании</span>
+        </div>
+    </footer>
+    <script src = "script.js"></script>
+    <script src = "card.js"></script>
+</body>

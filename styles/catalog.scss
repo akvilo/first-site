@@ -1,0 +1,948 @@
+@import 'variables','fonts';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat";
+}
+
+
+#header {
+  background: $color-blue;
+  display: flex;
+  position: absolute;
+  flex-wrap: nowrap;
+  inset: 0;
+  height: 60px;
+  margin-top: 38px;
+  
+
+    .header_language_UA {
+      color: red;
+      position: relative;
+      top: 0;
+    }
+
+.header_logo {
+  position: absolute;
+  margin-left: 380px;
+  margin-top: 12px;
+}
+
+.header_text {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-left: 420px;
+  padding-top: 6px;
+  letter-spacing: 2px;
+}
+.header_text_subtitle {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-left: 420px;
+  letter-spacing: 0.1px;
+}
+
+.header_search {
+  background: #FFffff;
+  display: flex;
+  width: 551px;
+  height: 40px;
+  margin-left: 58px;
+  margin-top: 9px;
+  clip-path: polygon(1% 0%, 100% 0%, 100% 0%,98.5% 100%, 0% 100%);
+  border-radius: 2px;
+  position: relative;
+  justify-self: flex-start;
+
+    input {
+      display: inline;
+      position: absolute;
+      width: 100%;
+      height: 38px;
+      left: 10px;
+      border: none;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .header_search_button {
+    background: $color-yellow;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 28px;
+    margin-left: 460px;
+    clip-path: polygon(9% 0%, 100% 0%, 100% 0%,91% 100%, 0% 100%);
+    border-radius: 5px;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .header_country {
+    background: #FFFFFF;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 116px;
+    top: 9px;
+    clip-path: polygon(9% 0%, 100% 0%, 100% 0%,91% 100%, 0% 100%);
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 0.9375rem;
+    align-items: center;
+    text-decoration: underline;
+    text-indent: 10px;
+
+    .header_country_location {
+      padding-right: 75px;
+      position: absolute;
+    }
+  }
+
+  .header_language {
+    display: flex;
+    position: absolute;
+    padding-left: 380px;
+    font-size: 0.875rem;
+    bottom: 70px;      
+  }
+
+  .header_language_UA {
+    color: $color-blue;
+    padding-left: 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+    
+  .header_language_slash {
+    color: $color-blue;
+    margin-left: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: default;
+  }
+
+  .header_language_RU {
+    color: $color-yellow;
+    margin-left: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .exchange {
+    position: absolute;
+    margin-left: 900px;
+    color: $color-grey;
+    bottom: 70px;
+    font-size: 0.875rem;
+
+      .exchange_euro_to_hrn {
+        margin-left: 20px;
+      }
+  }
+
+  .account {
+    position: absolute;
+    margin-left: 65vw;
+    color: $color-blue;
+    bottom: 70px;
+    font-size: 0.875rem;
+
+    .login {
+      cursor: pointer;
+    }
+    .registration {
+      margin-left: 25px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+.header_buttons {
+  display: flex;
+  gap: 25px;
+  height: 20px;
+  width: 20px;
+  margin-top: 20px;
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.under_header {
+  display: flex;
+  position: absolute;
+  background: #FFFFFF;
+  width: 99vw;
+  height: 46px;
+  margin-top: 60px;
+}
+.under_header_line {
+  display: flex;
+  position: absolute;
+  background: #EAEAEA;
+  width: 99vw;
+  top: 45px;
+  height: 2px;
+}
+
+.catalog {
+  color: #000000;
+  margin-top: 75px;
+  margin-left: 375px;
+  position: absolute;
+  font-size: 0.875rem;  
+  font-weight: 500;
+  letter-spacing: 0.8px;
+
+  & span {
+    margin-left: 28px;
+    cursor: pointer;
+  }
+
+  .catalog_1_select {
+    position: absolute;
+    background: rgb(60, 86, 122, 0.15);
+    width: 97px;
+    height: 48px;
+    clip-path: polygon(9% 0%, 100% 0%, 100% 0%,91% 100%, 0% 100%);
+    margin-top: -35px;
+    margin-left: 3px; 
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin-top: 45px;
+      background: $color-blue;
+      opacity: 1;
+      width: 100%;
+      height: 5px;
+    }
+
+  }
+  .catalog_1 {
+    color: $color-blue;
+  }
+}
+}
+
+
+.container { 
+  display: flex;
+  width: 100%;
+  font-weight: 500;
+}
+
+.parametres_founder,
+.selection {
+  height: 210px;
+  border-radius: 3px 3px 3px 3px;
+  margin-top: 5vw;
+  background: $color-light-grey;
+
+}
+.parametres_founder {
+    margin-top: 10vw;
+    margin-left: 20vw;
+    width: 615px;
+
+    .parametres_text {
+        position: relative;
+        font-size: 1.125rem;
+        color: $color-blue;
+        font-weight: 600;
+        margin-left: 10px;
+        top: 15px;
+    }
+
+    .blocks {
+        
+        line-height: 40px;
+        text-indent: 10px; 
+        font-size: 0.75rem;
+        font-weight: 00;
+        color: #000000;
+      
+
+            .block_width,
+            .block_appointment,
+            .block_shop {
+                position: absolute;
+                width: 187px;
+                height: 40px;
+                background: $color_white;
+                border-radius: 3px;
+
+       } 
+
+            .block_profile,
+            .block_brand,
+            .block_payer,
+            .block_diameter,
+            .block_model,
+            .block_select {
+                position: absolute;
+                width: 176px;
+                height: 40px;
+                background: $color_white;
+                border-radius: 3px;
+                cursor: pointer;
+
+       } 
+
+        .block_width {
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        
+        .block_appointment {
+            margin-top: 80px;
+            margin-left: 10px;
+        }
+
+        .block_shop {
+            margin-top: 130px;
+            margin-left: 10px;
+        }
+        
+        .block_profile {
+            margin-top: 30px;
+            margin-left: 210px;
+        }
+
+        .block_brand {
+            margin-top: 80px;
+            margin-left: 210px;
+        }
+
+        .block_payer {
+            margin-top: 130px;
+            margin-left: 210px;
+        }
+        
+        .block_diameter {
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+
+        .block_model {
+            margin-top: 30px;
+            margin-left: 400px;
+        }
+    
+        .block_select {
+            margin-top: 130px;
+            margin-left: 400px;
+            background: $color-yellow;
+        }
+        
+        .block_select_text {
+            position: absolute;
+            color: #313131;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-indent: 50%;
+        
+      }
+    }
+    
+}
+.selection {
+  margin-top: 10vw;
+  margin-left: 10vw;
+  width: 460px;
+  padding-left: 1.5%;
+  box-sizing: border-box;
+
+
+
+  .selection_text {
+    position: relative;
+    font-size: 1.125rem;
+    color: $color-blue;
+    font-weight: 600;
+    top: 15px;
+  }
+  .blocks {
+    display: flex;
+    column-gap: 10px;
+    height: 210px;
+    margin-top: -10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 40px;
+    text-indent: 10px; 
+    font-size: 0.75rem;
+    font-weight: 00;
+    color: #000000;
+
+
+      .block_brand,
+      .block_year,
+      .block_model,
+      .block_complectation,
+      .block_select {
+        background: $color-white;
+        width: 217px;
+        height: 40px;
+        border-radius: 3px;
+        cursor: pointer;
+
+      }
+
+      .block_brand, 
+      .block_model {
+        margin-top: 40px;
+      }
+
+      .block_model,
+      .block_complectation,
+      .block_select {
+        width: 185px;
+      }
+
+      .block_select {
+        background: $color-yellow;
+      }
+    
+    .block_select_text {
+      position: absolute;
+        color: #313131;
+        font-size: 0.875rem;
+        text-indent: 45px;
+        font-weight: 500;
+    
+    }
+  }
+}
+
+.filter {
+  position: absolute;
+  margin-top: 430px;
+  float: left;
+  margin-left: 21vw;
+}
+  
+  .filter_name {
+    font-size: 1.31rem;
+    
+  }
+  .price_block {
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background: $color-light-grey;
+    width: 217px;
+    height: 1160px;
+    align-items: start;
+    
+    
+    .price_range {
+      position: absolute;
+      margin-top: 15px;
+      font-size: 0.875rem;
+    }
+
+    .price_from,
+    .price_to {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: $color-white;
+      width: 60px;
+      height: 27px;
+      margin-top: 3vw;
+      font-size: 0.675rem;
+      
+
+    }
+    .price_to {
+      width: 66px;
+      margin-left: 0.5vw;
+    }
+  
+
+    .small_range_text {
+      display: block;
+      white-space: nowrap;
+      margin-top: 5px;
+      font-size: 0.4375rem;
+      margin-left: 0.5vw;
+    }
+
+    .value {
+      display: inline-block;
+      position: relative;
+      margin-top: 3.5vw;
+      margin-left: 0.5vw;
+      font-size: 0.4375rem;
+    }
+
+    .button_ok {
+      display: flex;
+      background: $color-green;
+      color: $color-white;
+      align-items: center;
+      font-size: 0.675rem;
+      width: 30px;
+      height: 27px;
+      clip-path: polygon(15% 0%, 100% 0%, 100% 0%,85% 100%, 0% 100%);
+      cursor: pointer;
+      margin-top: 3vw;
+      margin-left: 1vw;
+
+      .ok {
+        margin-left: 25%;
+      }
+    }
+
+    .scrolling {
+      position: absolute;
+      margin-top: 5vw;
+      display: flex;
+      width: 200px;
+      height: 13px;
+
+      .shampur {
+        position: absolute;
+        background: #B5B5B5;
+        margin-top: 6px;
+        margin-left: 13px;
+        width: 176px;
+        height: 2px;
+      }
+
+      .cycle {
+        background: $color-green;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        z-index: 1;
+
+        &:last-child {
+          margin-left: 87%;
+        }
+      }
+    }
+
+
+    .settings {
+      display: flex;
+      position: relative;
+      width: 10vw;
+      height: 55vw;
+      margin-top: 4vw;
+      margin-left: 5px;
+      font-size: 0.875rem;
+      flex-direction: column;
+      gap: 25px;
+      list-style: none;
+
+      span {
+        cursor: pointer;
+      }
+      li::before {
+        content: "";
+        display: inline-block;
+        background: $color-white;
+        width: 9px;
+        height: 9px;
+        border: 1px solid $color-dark-blue; 
+        margin-right: 5px;
+      }
+    }
+
+    .season::after,
+    .speed::after,
+    .load::after,
+    .class::after,
+    .year_old::after,
+    .brand_text::after,
+    .country_creator::after,
+    .country::after,
+    .additionally::after
+     {
+        content: "▾";
+        display: inline-block;
+        position: absolute;
+        color: $color-blue;
+        right: 0%;
+        cursor: pointer;
+    }
+    .season_select {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.3vw;
+      font-size: 0.75rem;
+      gap: 10px;
+      margin-top: -10px;
+
+      img {
+        margin-left: 15px;
+      }
+      
+      .allseason {
+        
+        img:nth-child(2) {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .speed {
+      position: relative;
+    }
+
+    .more {
+      font-size: 0.75rem;
+      text-decoration: underline;      
+    }
+
+    .brand_select {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.3vw;
+      font-size: 0.75rem;
+      gap: 10px;
+      margin-top: -10px;
+    }
+
+    .country_select {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.3vw;
+      font-size: 0.75rem;
+      gap: 10px;
+      margin-top: -10px;
+    }
+  
+    .additionally_select {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.3vw;
+      font-size: 0.75rem;
+      gap: 10px;
+      margin-top: -10px;
+    }
+
+  }
+
+  .sorting {
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    height: 20px;
+    margin-top: 23vw;
+    margin-left: 20vw;
+  }
+
+  .sorting_line {
+    position: absolute;
+    width: 956px;
+    height: 1px;
+    background: #EAEAEA;
+    margin-top: 1vw;
+  }
+    
+    .sorting_text,
+    .on_start {
+      font-size: 0.75rem;
+      margin-left: 3vw;
+    }
+    .popular, 
+    .expension {
+      text-decoration: underline;
+      cursor: pointer;
+      &::after
+      {
+         content: "▾";
+         display: inline-block;
+         margin-left: 25px;
+         cursor: pointer;
+     }
+    }
+
+    .squares {
+      margin-left: 25vw;
+    }
+
+    .blue_square,
+    .blue_second_square {
+      background: $color-blue;
+      width: 9px;
+      height: 20px;
+      margin-top: -5px;
+    }
+
+    .blue_second_square {
+      background: $color-blue;
+      width: 21px;
+      margin-left: 11px;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin-top: 25vw;
+      margin-left: 20vw;
+      width: 882px;
+      height: 1300px;
+      gap: 20px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+      border: 2px, solid $color-light-grey;
+      border-radius: 3px;
+      width: 882px;
+      height: 219px;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 3;
+      }
+      &:nth-child(4) {
+        order: 4;
+      }
+      img {
+        margin-top: 2px;
+        width: 231px;
+      }
+
+      .name_tire {
+        margin-top: 1vw;
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-right: 15vw;
+      }
+
+      .name_tire_second {
+        font-weight: 500;
+      }
+
+
+      .tire_price {
+        color: $color-blue;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .button_more { 
+        background: $color-green;
+        color: $color-white;
+        margin-top: 1vw;
+        width: 148px;
+        height: 42px;
+        text-align: center;
+        clip-path: polygon(7% 0%, 100% 0%, 100% 0%,93% 100%, 0% 100%);
+        cursor: pointer;
+
+
+        &::after {
+          content: "Подробнее";
+          color: $color_white;
+          display: block;
+          font-size: 14px;;
+          margin-top: 10px;
+        }
+      }
+
+      .card_comprasion {
+        display: flex;
+        position: absolute;
+        margin-left: 25vw;
+        margin-top: 8.5vw;
+        width: 150px;
+        font-size: 0.875rem;
+        
+        span {
+          margin-left: 15px;
+          cursor: pointer;
+        }
+        img { 
+          width: 20px;
+          height: 18px;
+          cursor: pointer;
+        }
+      }
+      .card_favorite {
+        display: flex;
+        position: absolute;
+        margin-left: 35vw;
+        margin-top: 8.5vw;
+        width: 150px;
+        font-size: 0.875rem;
+        
+        span {
+          margin-left: 15px;
+          cursor: pointer;
+        }
+        img { 
+          width: 20px;
+          height: 18px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .more_products {
+      display: flex;
+      position: absolute;
+      margin-top: 76vw;
+      margin-right: 12vw;
+      width: 264px;
+      height: 202px;
+      border: 2px, solid $color-light-grey;
+      border-radius: 3px;
+      align-items: center;
+      cursor: pointer;
+
+      &::after {
+        content: "Показать больше товаров";
+        color: $color-blue;
+        font-weight: 600;
+        margin-top: 5vw;
+        margin-left: -8vw;
+      }
+
+      img {
+        margin-left: 5vw;
+        margin-bottom: 3vw;
+        width: 75px;
+        height: 75px;
+      }
+    }
+
+  .pages {
+    position: absolute;
+    display: flex;
+    margin-top: 89vw;
+    margin-left: 15vw;
+
+    span {
+      margin-left: 20px;
+      cursor: pointer;
+
+      &:first-child {
+        color: $color-blue;
+        font-weight: 600;
+      }
+    }
+  }
+
+  #footer {
+    position: absolute;
+    display: flex;
+    background: $color-grey;
+    color: $color-white;
+    width: 100%;
+    height: 124px;
+    top: 110vw;
+  
+    .copyright,
+    .phone,
+    .numbers,
+    .mail,
+    .mail_adress,
+    .conf {
+      font-size: 0.875rem;
+  
+    }
+  
+    .footer_logo {
+      height: 35px;
+      width: 35px;
+      margin-top: 35px;
+      margin-left: 370px;
+    }
+  
+    .footer_logo_text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 37px;
+      margin-left: 10px;
+    }
+  
+    .copyright {
+      position: absolute;
+      color: $color-second-white;
+      top: 85px;
+      left: 370px;
+    }
+  
+    .phone {
+      margin-left: 85px;
+      margin-top: 30px;
+      font-weight: 500;
+    }
+  
+    .numbers {
+      position: absolute;
+      color: $color-second-white;
+      left: 637px;
+      top: 65px;
+    }
+  
+    .mail {
+      font-size: 0.875rem;
+      margin-left: 165px;
+      margin-top: 30px;
+      font-weight: 500;
+    }
+  
+    .mail_adress { 
+      position: absolute;
+      font-size: 0.875rem;
+      color: $color-second-white;
+      left: 877px;
+      top: 65px;
+    }
+  
+    .conf { 
+      position: absolute;
+      font-size: 0.875rem;
+      color: $color-second-white;
+      left: 1237px;
+      top: 35px;
+      text-decoration: underline;
+      cursor: pointer;
+    } 
+  
+    .arrow_up {
+      background: #144B98;
+      clip-path: polygon(10% 0%, 100% 0%, 100% 0%,90% 100%, 0% 100%);
+      width: 41px;
+      height: 37px;
+      margin-top: 37px;
+      margin-left: 650px;
+    }
+  }
+  
