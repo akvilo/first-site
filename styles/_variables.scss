@@ -2,6 +2,7 @@
     $color-light-grey: rgb(238, 238, 238);
     $color-second-white: #C1C1C1;
     $color-gray-3: #EAEAEA;
+    $color-gray-4: #868686;
     $color-gray-card-text: #AEAEAE;
     $color-blue: #3c567a;
     $color-yellow: #FFD21D;
@@ -9,6 +10,8 @@
     $color-grey: #333333;
     $color-light-blue: #CCE1EF;
     $color-dark-blue: #144B98;
+    $color-text-grey: #4D4D4D;
+    $color_gray-line: #BBBBBB;
 
-
-
+    $after-display-block: var(--after-display, block);
+    $after-display-none: var(--after-display, none);

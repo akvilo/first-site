@@ -4,27 +4,44 @@ const pickFavorite = document.getElementById('button_to_cart')
 const listUserFavorite = document.getElementById('favorite-user-cards')
 const listCards = document.getElementById('products_blocks')
 
-const cards = [1, 2, 3, 4]
+
+let cards = [
+    {
+        number: 1,
+        price: 1800,
+        indexCard: null
+    },
+    {
+        number: 2,
+        price: 1880,
+        indexCard: null
+    },
+    {
+        number: 3,
+        price: 2300,
+        indexCard: null
+
+    },
+    {
+        number: 4,
+        price: 1500,
+        indexCard: null
+
+    }
+]
 
 function renderCards() {
+    listCards.innerHTML = ''
     for (let i = 0; i < cards.length; i++) {
-        console.log(`Карточка ${i} загружена`)
-        listCards.insertAdjacentHTML('beforeend', getCard(i))
+        console.log(`Карточка ${i + 1} загружена`)
+        listCards.insertAdjacentHTML('beforeend', getCard(cards[i].price, i))
+        cards[i].indexCard = i
     };
-}
-
-function checkGuarantee() {
-    if (document.getElementById('product_guarantee').textContent === 'Есть') {
-        return guarantee = true;
-    }
-    else {
-        return guarantee = false
-    }
 }
 
 renderCards()
 
-function getCard(cardIndex) {
+function getCard(price,cardIndex) {
     return`
             <div class="product_block">
             <div class="product_block_1">
@@ -79,7 +96,7 @@ function getCard(cardIndex) {
             </div>
             <div class="product_block_buy">
                 <div class = "product_block_buy_left_side">
-                    <span class = "block_buy_cost">1 800грн.</span>
+                    <span class = "block_buy_cost">${price} грн</span>
                     <span class = "block_buy_in_stock">Доступно 8шт</span>
                     <div class = "block_buy_cost_delivery">
                         <span>Цена с доставкой</span>
@@ -88,27 +105,25 @@ function getCard(cardIndex) {
                 <div class = "product_block_buy_right_side">
                     <div class = "button_in_shop">В магазин</div>
                     <div class = "button_fast_buy"">Быстрый заказ</div>
-                    <div id = "button_to_cart" data-index = "${cardIndex}" onclick = 'cardToFavorite()'>В корзину</div>
+                    <div id = "button_to_cart" data-index = "${cardIndex}" onclick = 'cardToFavorite(${price})'>В корзину</div>
                 </div>
             </div>
         </div>`
 }
 
 const favorites = []
-let index = favorites.length;
 
-cardToFavorite = function() {
-    listUserFavorite.insertAdjacentHTML('beforeend', getFavoriteUser())
-    favorites.push(index);
-    // favorites.unshift - поместить иднекс в самое начало массива
-    index++
-    renderFavorite()
+let indexFavorite = favorites.length;
+
+cardToFavorite = function(price) {
+    favorites.push({i: indexFavorite, price: price})
+    renderFavorite(price)
 }
 
-function renderFavorite() {
+function renderFavorite(favoritePrice) {
     listUserFavorite.innerHTML = '';
     for (let i = 0; i <favorites.length; i++) {
-        listUserFavorite.insertAdjacentHTML('beforeend', getFavoriteUser(i))
+        listUserFavorite.insertAdjacentHTML('beforeend', getFavoriteUser(favoritePrice, i))
     }
     
     const userCart = document.getElementById('favorite-header-text')
@@ -122,7 +137,7 @@ function renderFavorite() {
 
 renderFavorite()
 
-function getFavoriteUser(favoriteIndex) {
+function getFavoriteUser(favoritePrice, favoriteIndex) {
     
     return`
            <div class="product-favorite-block">
@@ -178,7 +193,7 @@ function getFavoriteUser(favoriteIndex) {
             </div>
             <div class="product_block_buy">
                 <div class = "product_block_buy_left_side">
-                    <span class = "block_buy_cost">1 800грн.</span>
+                    <span class = "block_buy_cost">${favorites[favoriteIndex].price} грн</span>
                     <span class = "block_buy_in_stock">Доступно 8шт</span>
                     <div class = "block_buy_cost_delivery">
                         <span>Цена с доставкой<span>
@@ -194,6 +209,7 @@ function getFavoriteUser(favoriteIndex) {
 
 listUserFavorite.onclick = function(event) {
     if (event.target.dataset.index) {
+        
         const index = +(event.target.dataset.index)
         const type = (event.target.dataset.type)
         console.log(index, type)
@@ -326,5 +342,46 @@ function getReviewTemplate(review, reviewIndex) {
         <hr>
     </div>`
 }
+const btnSortSelector = document.querySelector('.sorting-selector-pick')
+const sortingList = document.getElementById('sorting-list')
 
-console.log(productSelector.toReversed())
+btnSortSelector.onclick = function(){
+    if (sortingList.style.display === 'none') {
+        sortingList.style.display = 'flex'
+    }
+    else {
+        sortingList.style.display = 'none'
+    }
+}
+
+const btnSortPopularity = document.getElementById('sorting-slot-1')
+const btnSortPriceByExpensive = document.getElementById('sorting-slot-2')
+const btnSortPriceByCheap = document.getElementById('sorting-slot-3')
+const btnSortInputPrice = document.getElementById('sorting-slot-4')
+const inputSortPrice = document.getElementById('sorting-slot-4-input')
+
+const allBtnSort = [btnSortPopularity, btnSortPriceByExpensive, btnSortPriceByCheap, btnSortInputPrice]
+
+allBtnSort.forEach(btn => 
+    btn.onclick = function() {
+    if (btn === btnSortPopularity) {
+        console.log('a')
+    }
+    else if (btn === btnSortPriceByExpensive) {
+        cards = cards.sort((a, b) => b.price - a.price)
+    }
+    else if (btn === btnSortPriceByCheap) {
+        cards = cards.sort((a, b) => a.price - b.price)
+    }
+    else if (btn === btnSortInputPrice) {
+        if (inputSortPrice.style.display = 'none') {
+            btnSortInputPrice.style.display = 'none'
+            inputSortPrice.style.display = 'flex'
+        }
+        else {
+            btnSortInputPrice.style.display = 'flex'
+            inputSortPrice.style.display = 'none'
+        }
+    }
+    renderCards()
+})

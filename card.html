@@ -218,7 +218,7 @@
                     <span>Добавить в избранные</span>
                 </div>
             </div>
-            <div class="best_offers">
+            <div class="best_offers"> 
                 <span class = "best_offer_kyiv">Лучшие предложения в Киеве</span>
                 <div class="offer_1">
                     <img src="images/card/Rectangle 2.81.svg" alt="photo card">
@@ -275,15 +275,22 @@
         <span id = "product_slot_3">Информация производителя</span>
         <span id = "product_slot_4">Отзывы</span>
     </div>
-    <div class="sorting_block">
-        <span class = "selector_text">
-            Сортировка:
-            <span class = "sorting_selector">Популярные</span>
-        </span>
+    <nav class="sorting_block">
+        <span class = "selector_text"> Сортировка:</span>
+            <div id = "sorting-selector">
+                <button class = 'sorting-selector-pick'>Популярные</button>
+                <ul id="sorting-list">
+                    <li class="sorting-list-text" id ='sorting-slot-1'>Популярные</li>
+                    <li class="sorting-list-text" id ='sorting-slot-2'>От дорогих к дешёвым</li>
+                    <li class="sorting-list-text" id ='sorting-slot-3'>От дешёвых к дорогим</li>
+                    <li class="sorting-list-text" id ='sorting-slot-4'>От цены</li>
+                    <input id = 'sorting-slot-4-input' type="number">
+                </ul>
+            </div>
         <li class = "sorting_slot_1">С доставкой из других городов (5)</li>
-        <li>Включить доставку в стоимость</li>
-        <li>С НДС</li>
-    </div>
+        <li class = "sorting_slot_2">Включить доставку в стоимость</li>
+        <li class = "sorting_slot_3">С НДС</li>
+    </nav>
     <section id="products_blocks">
         <!-- <div class="product_block">
             <div class="product_block_1">
